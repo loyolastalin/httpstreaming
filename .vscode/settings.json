@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/3389597b-cda2-4f7f-a705-6e7dc3e07728/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/stalinweatherwebapi",
+    "appService.deploySubpath": "Publish"
+}

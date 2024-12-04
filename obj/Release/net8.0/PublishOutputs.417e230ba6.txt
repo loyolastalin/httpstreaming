@@ -1,0 +1,17 @@
+D:\.netproj\httpstreaming\Publish\httpstreaming.exe
+D:\.netproj\httpstreaming\Publish\Publish\web.config
+D:\.netproj\httpstreaming\Publish\appsettings.Development.json
+D:\.netproj\httpstreaming\Publish\appsettings.json
+D:\.netproj\httpstreaming\Publish\Publish\appsettings.Development.json
+D:\.netproj\httpstreaming\Publish\Publish\appsettings.json
+D:\.netproj\httpstreaming\Publish\Publish\httpstreaming.deps.json
+D:\.netproj\httpstreaming\Publish\Publish\httpstreaming.runtimeconfig.json
+D:\.netproj\httpstreaming\Publish\httpstreaming.dll
+D:\.netproj\httpstreaming\Publish\httpstreaming.deps.json
+D:\.netproj\httpstreaming\Publish\httpstreaming.runtimeconfig.json
+D:\.netproj\httpstreaming\Publish\httpstreaming.pdb
+D:\.netproj\httpstreaming\Publish\Microsoft.AspNetCore.OpenApi.dll
+D:\.netproj\httpstreaming\Publish\Microsoft.OpenApi.dll
+D:\.netproj\httpstreaming\Publish\Swashbuckle.AspNetCore.Swagger.dll
+D:\.netproj\httpstreaming\Publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\.netproj\httpstreaming\Publish\Swashbuckle.AspNetCore.SwaggerUI.dll

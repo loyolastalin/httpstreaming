@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "07LlDpTDW1E2k8BsfkALvIu5viPALNsO4uzDgN7UXbQ=",
+  "Source": "httpstreaming",
+  "BasePath": "_content/httpstreaming",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

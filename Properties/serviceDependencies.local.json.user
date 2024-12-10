@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2024-12-09T05:23:57.7180927Z"
+    },
+    "appInsights1": {
+      "restored": true,
+      "restoreTime": "2024-12-09T05:24:11.5043044Z"
+    }
+  },
+  "parameters": {
+    "appInsights1.resourceGroupName": {
+      "Name": "appInsights1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "appsvc_windows_centralus"
+    },
+    "appInsights1.subscriptionId": {
+      "Name": "appInsights1.subscriptionId",
+      "Type": "subscription",
+      "Value": "3389597b-cda2-4f7f-a705-6e7dc3e07728"
+    }
+  }
+}

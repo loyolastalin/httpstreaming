@@ -1,7 +1,16 @@
 using Microsoft.Extensions.Options;
+using Microsoft.Identity.Web;
+using Serilog;
+using Azure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//builder.Host.UseSerilog((ctx, conf) =>
+//{
+//    conf.ReadFrom.Configuration(ctx.Configuration);
+//});
+
+builder.Services.AddMicrosoftIdentityWebApiAuthentication(builder.Configuration);
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -11,6 +20,8 @@ builder.Services.AddCors(options => options.AddPolicy("MyTestPolicy", policy =>
 {
     policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
 }));
+
+builder.Services.AddApplicationInsightsTelemetry();
 
 var app = builder.Build();
 
@@ -24,15 +35,21 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseCors("MyTestPolicy");
 app.MapControllers();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.Use(async (context, next) =>
+{
+    if (!context.User.Identity?.IsAuthenticated ?? false)
+    {
+        context.Response.StatusCode = 401;
+        await context.Response.WriteAsync("Not Authenticated");
+    }
+    else await next();
+
+});
+
 app.Run();
 
-public class WeatherForecast
-{
-    public DateTime Date { get; set; }
 
-    public int TemperatureC { get; set; }
-
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-
-    public string? Summary { get; set; }
-}

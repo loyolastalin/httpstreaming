@@ -3,9 +3,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Web.Resource;
-using System.Runtime.CompilerServices;
 
-namespace IrxjsEnumerable.Controllers
+namespace httpstreaming.Controllers
 {
     [ApiController]
     [Route("api/weather")]

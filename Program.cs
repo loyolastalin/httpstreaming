@@ -1,14 +1,11 @@
-using Microsoft.Extensions.Options;
+using httpstreaming.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web;
-using Serilog;
-using Azure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//builder.Host.UseSerilog((ctx, conf) =>
-//{
-//    conf.ReadFrom.Configuration(ctx.Configuration);
-//});
+builder.Services.AddPooledDbContextFactory<AppDbContext>(opt => opt.UseSqlServer
+           (builder.Configuration.GetConnectionString("CommandConStr")));
 
 builder.Services.AddMicrosoftIdentityWebApiAuthentication(builder.Configuration);
 // Add services to the container.
